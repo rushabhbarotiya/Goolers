@@ -1,294 +1,4 @@
-<style>
-    .headx {
-        text-align: center;
-        padding-top: 85px;
-        z-index: 5;
-        position: relative;
-    }
-
-    .ptext {
-        margin: 15px 0;
-    }
-
-    .animatedclass {
-        background-image: url(https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Original_62001354-White-Pine_1_1.png?v=1732172849);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    .mainbx {
-        width: 100%;
-        height: 2230px;
-        position: relative;
-    }
-
-    .squiggle {
-        position: absolute;
-        top: -160px;
-        left: 0;
-        width: 100%;
-        height: auto;
-        /* padding-left: 125px; */
-        z-index: 0;
-    }
-
-    .squiggle-left {
-        position: absolute;
-        top: 48%;
-        left: 0;
-        width: 50%;
-    }
-
-    .squiggle-right {
-        position: absolute;
-        top: 52%;
-        right: 0;
-        width: 50%;
-    }
-</style>
-<style>
-    .since-box {
-        position: absolute;
-        right: 12%;
-        width: 135px;
-        top: 10%;
-    }
-
-    .bicycle-box {
-        position: absolute;
-        right: calc(50% - 365px);
-        top: 3.7%;
-    }
-
-    .bicycle-box {
-        opacity: 0;
-        transform: translateX(100%);
-        transition: transform 1s ease-out, opacity 1s ease-out;
-    }
-
-    .bicycle-box.animate {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    /* Example layout styling */
-    .bicycle-box img {
-        max-width: 100%;
-        display: block;
-    }
-
-    .Gopal-locho-home {
-        position: absolute;
-        left: calc(50% - 480px);
-        top: 6.4%;
-    }
-
-    .Gopal-locho-home img {
-        position: relative;
-    }
-
-    .gopal-name {
-        position: absolute;
-        left: 33%;
-        top: 5.5%;
-    }
-
-    .gopal-name {
-        display: inline-block;
-        opacity: 0;
-        animation: hideShow 4s ease-in-out infinite;
-        animation-delay: 0.5s;
-    }
-
-    @keyframes hideShow {
-
-        0%,
-        100% {
-            opacity: 0;
-        }
-
-        50% {
-            opacity: 1;
-        }
-    }
-
-    .brand-box {
-        position: absolute;
-        top: 17%;
-        left: 12%;
-        width: 500px;
-    }
-
-    .brand-box h6,
-    .brand_loyalty-box h6,
-    .barnd-traditional-box h6,
-    .brand-loyalty-box h6,
-    .barnd-locho-box h6 {
-        color: #000;
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-    }
-
-    .brand-box p,
-    .brand_loyalty-box p,
-    .barnd-traditional-box p,
-    .brand-loyalty-box p,
-    .barnd-locho-box p,
-    .since-box p {
-        opacity: 0.6;
-    }
-
-    .brand-man {
-        position: absolute;
-        right: calc(50% - 220px);
-        top: 19%;
-    }
-
-    .brand-man {
-        display: inline-block;
-        animation: wave 5s ease-in-out infinite;
-    }
-
-    @keyframes wave {
-        0% {
-            transform: translateX(0);
-        }
-
-        50% {
-            transform: translateX(20px);
-        }
-
-        100% {
-            transform: translateX(0);
-        }
-    }
-
-    .brand_loyalty-box {
-        position: absolute;
-        top: 35%;
-        right: 10%;
-        width: 590px;
-        text-align: right;
-    }
-
-    .iconitem-box {
-        position: absolute;
-        top: 40.5%;
-        right: calc(50% - 540px);
-    }
-
-    .truck-box {
-        position: absolute;
-        top: 46.2%;
-        left: 0%;
-        opacity: 0;
-        /* Initially hidden */
-        transform: translateX(-100px);
-        /* Start slightly to the left */
-        transition: opacity 2s ease-in-out, transform 2s ease-in-out;
-        /* Smooth transitions */
-    }
-
-    .truck-box.animate {
-        opacity: 1;
-        /* Fully visible */
-        transform: translateX(100px);
-        /* Move to the original position */
-    }
-
-    .cold-coco-box {
-        position: absolute;
-        top: 61.5%;
-        left: 10%;
-        width: 15%;
-    }
-
-    .cold-coco-box img {
-        opacity: 0;
-        transform: scale(0.8);
-        transition: opacity 1s ease, transform 1s ease;
-    }
-
-    .cold-coco-box img.show {
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    .barnd-traditional-box {
-        position: absolute;
-        top: 64%;
-        left: 28%;
-        width: 300px;
-    }
-
-    .brand-loyalty-box {
-        position: absolute;
-        top: 75%;
-        left: 6%;
-        width: 600px;
-    }
-
-    .chutney-box {
-        position: absolute;
-        top: 64%;
-        right: 15%;
-    }
-
-    .chutney-box img {
-        opacity: 0;
-        transform: scale(0.6);
-        transition: opacity 1.2s ease, transform 1.2s ease;
-    }
-
-    .chutney-box img.show {
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    .barnd-locho-box {
-        position: absolute;
-        top: 75%;
-        right: 10%;
-        text-align: right;
-        width: 250px;
-    }
-
-    .Gopal-logo-box {
-        position: absolute;
-        top: 88%;
-        left: 49%;
-    }
-
-    .Gopal-logo-box img {
-        opacity: 0;
-        transform: scale(0.6);
-        transition: opacity 1.5s ease, transform 1.5s ease;
-    }
-
-    .Gopal-logo-box img.show {
-        opacity: 1;
-        transform: scale(1);
-    }
-</style>
-<style>
-    @media screen and (max-width:1366px) {
-        .squiggle {
-            top: -115px;
-        }
-        img{
-            width: 100%;
-        }
-        .bicycle-box {
-    position: absolute;
-    right: calc(50% - 330px);
-    top: 3.7%;
-}
-</style>
-
-
+{{ 'Goolers-animated.css' | asset_url | stylesheet_tag }}
 <section class="animatedclass">
     <div class="container">
         <div class="headx">
@@ -297,7 +7,7 @@
             <a class="button button--xl button--outline" href="#">{{section.settings.btn_txt}}</a>
         </div>
 
-        <div class="mainbx">       
+        <div class="mainbx">
             <svg width="1440" height="2436" viewBox="0 0 1440 2436" fill="none" xmlns="http://www.w3.org/2000/svg"
                 class="squiggle">
                 <path id="svgPath"
@@ -326,22 +36,22 @@
                     </linearGradient>
                 </defs>
             </svg>
-       
+
             <div>
                 <div class="since-box">
                     <p>{{section.settings.journeytxt-1}}</p>
                 </div>
                 <div class="bicycle-box">
-               
-                    <img src="{{ section.settings.img_one | image_url: 'master'}}" width="" height="">
+
+                    <img src="{{ section.settings.img_one | img_url: 'master'}}" width="" height="">
 
                 </div>
                 <div>
                     <div class="Gopal-locho-home">
-                        <img src="{{ section.settings.img_two | image_url: 'master'}}" width="" height="">
+                        <img src="{{ section.settings.img_two | img_url: 'master'}}" width="" height="">
                     </div>
                     <div class="gopal-name">
-                        <img src="{{ section.settings.img_three | image_url: 'master'}}" width="" height="">
+                        <img src="{{ section.settings.img_three | img_url: 'master'}}" width="" height="">
                     </div>
                 </div>
 
@@ -360,25 +70,25 @@
                     {% comment %} <img
                         src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Animation_-_1732531864733.gif?v=1732534973"
                         alt="" srcset=""> {% endcomment %}
-                    <img src="{{ section.settings.img_four | image_url: 'master'}}" width="" height="">
+                    <img src="{{ section.settings.img_four | img_url: 'master'}}" width="" height="">
                 </div>
             </div>
             <div class="">
                 <div class="truck-box">
-                    <img src="{{ section.settings.img_five | image_url: 'master'}}" width="" height="">
+                    <img src="{{ section.settings.img_five | img_url: 'master'}}" width="" height="">
                 </div>
                 <div class="brand_loyalty-box">
                     <h6>{{section.settings.journeyhead-3}}</h6>
                     <p>{{section.settings.journeytxt-3}}</p>
                 </div>
                 <div class="iconitem-box">
-                    <img src="{{ section.settings.img_six | image_url: 'master'}}" width="" height="">
+                    <img src="{{ section.settings.img_six | img_url: 'master'}}" width="" height="">
                 </div>
             </div>
 
             <div>
                 <div class="cold-coco-box">
-                    <img src="{{ section.settings.img_seven | image_url: 'master'}}" width="" height="">
+                    <img src="{{ section.settings.img_seven | img_url: 'master'}}" width="" height="">
                 </div>
                 <div class="barnd-traditional-box">
                     <h6>{{section.settings.journeyhead-4}}</h6>
@@ -392,7 +102,7 @@
                     <p>{{section.settings.journeytxt-5}}</p>
                 </div>
                 <div class="chutney-box">
-                    <img src="{{ section.settings.img_Eight | image_url: 'master'}}" width="" height="">
+                    <img src="{{ section.settings.img_Eight | img_url: 'master'}}" width="" height="">
                 </div>
                 <div class="barnd-locho-box">
                     <h6>{{section.settings.journeyhead-6}}</h6>
@@ -400,138 +110,12 @@
                 </div>
             </div>
             <div class="Gopal-logo-box">
-                <img src="{{ section.settings.img_logo | image_url: 'master'}}" width="" height="">
+                <img src="{{ section.settings.img_logo | img_url: 'master'}}" width="" height="">
             </div>
         </div>
     </div>
 </section>
-<script>
-    const svg = document.getElementById("svgPath");
-    const length = svg.getTotalLength();
 
-    // Start positioning of SVG drawing
-    svg.style.strokeDasharray = length;
-    svg.style.strokeDashoffset = length;
-
-    // Add smooth transition for drawing
-    svg.style.transition = "stroke-dashoffset 0.5s ease-out";
-
-    window.addEventListener("scroll", function () {
-        const scrollPosition = document.body.scrollTop + document.documentElement.scrollTop;
-        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
-        // Calculate scroll percentage
-        const scrollpercent = scrollPosition / scrollHeight;
-
-        // Adjust to start from center
-        const centerPoint = 0.6; // 50% of scroll (center)
-        const offsetRange = 0.25; // Range where it starts and ends smoothly (25%)
-
-        let adjustedScroll = 0;
-        if (scrollpercent >= centerPoint - offsetRange && scrollpercent <= centerPoint + offsetRange) {
-            adjustedScroll =
-                (scrollpercent - (centerPoint - offsetRange)) / (2 * offsetRange);
-        } else if (scrollpercent > centerPoint + offsetRange) {
-            adjustedScroll = 1;
-        }
-
-        // Apply offset to the path
-        const draw = length * adjustedScroll;
-        svg.style.strokeDashoffset = length - draw;
-    });
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const svgElement = document.querySelector(".squiggle-left path");
-        const length = svgElement.getTotalLength();
-
-        // Initial setup of stroke-dasharray and stroke-dashoffset
-        svgElement.style.strokeDasharray = length;
-        svgElement.style.strokeDashoffset = length;
-
-        // Add smooth transition
-        svgElement.style.transition = "stroke-dashoffset 0.5s ease-out";
-
-        window.addEventListener("scroll", () => {
-            const scrollPosition = document.body.scrollTop + document.documentElement.scrollTop;
-            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
-            // Calculate scroll percentage
-            const scrollPercent = scrollPosition / scrollHeight;
-
-            // Adjust animation around center point
-            const centerPoint = 0.6; // 40% of scroll height
-            const offsetRange = 0.25; // 25% range for smooth animation
-            let adjustedScroll = 0;
-
-            if (scrollPercent >= centerPoint - offsetRange && scrollPercent <= centerPoint + offsetRange) {
-                adjustedScroll =
-                    (scrollPercent - (centerPoint - offsetRange)) / (2 * offsetRange);
-            } else if (scrollPercent > centerPoint + offsetRange) {
-                adjustedScroll = 1;
-            }
-
-            // Update stroke-dashoffset for animation
-            const draw = length * adjustedScroll;
-            svgElement.style.strokeDashoffset = length - draw;
-        });
-    });
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const truckBox = document.querySelector(".truck-box");
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    truckBox.classList.add("animate"); // Trigger animation
-                }
-            });
-        }, {
-            root: null, // Use the viewport as the root
-            threshold: 0.5 // Element is visible when 50% of it is in the viewport
-        });
-
-        observer.observe(truckBox);
-    });
-    document.addEventListener("DOMContentLoaded", () => {
-        const bicycleBox = document.querySelector(".bicycle-box");
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    bicycleBox.classList.add("animate"); // Trigger the animation
-                }
-            });
-        }, {
-            root: null, // Use the viewport as the root
-            threshold: 0.5 // Element is visible when 50% of it is in the viewport
-        });
-
-        observer.observe(bicycleBox);
-    });
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const images = document.querySelectorAll(".cold-coco-box img, .chutney-box img, .Gopal-logo-box img");
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add("show");
-                    }, index * 500); // Stagger animations by 500ms
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            root: null,
-            threshold: 0.5
-        });
-
-        images.forEach((img) => observer.observe(img));
-    });
-</script>
 
 {% schema %}
 {
@@ -669,3 +253,6 @@
 ]
 }
 {% endschema %}
+
+<script src="{{ 'Goolers-animated.js' | asset_url }}" defer></script>
+

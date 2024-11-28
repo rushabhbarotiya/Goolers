@@ -70,7 +70,7 @@
       </div>
       <div class="rightdiv">
         {% if section.settings.imgabout %}
-          <img src="{{ section.settings.imgabout | image_url: 1000 }}" width="" height="">
+          <img src="{{ section.settings.imgabout | img_url: 'master' }}" width="" height="">
         {% else %}
           <p>No image selected.</p>
         {% endif %}
