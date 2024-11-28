@@ -1,0 +1,151 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer group",
+  "sections": {
+    "text-with-icons": {
+      "type": "text-with-icons",
+      "blocks": {
+        "free-shipping": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "mobile_icon_width": 24,
+            "icon_width": 24,
+            "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "Free shipping",
+            "content": "<p>Tell your customers about your shipping offer.</p>"
+          }
+        },
+        "customer-support": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-customer-support",
+            "mobile_icon_width": 24,
+            "icon_width": 24,
+            "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "Customer service",
+            "content": "<p>Tell your customers how they can reach you.</p>"
+          }
+        },
+        "discount": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-coupon",
+            "mobile_icon_width": 24,
+            "icon_width": 24,
+            "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "Refer a friend",
+            "content": "<p>Tell your customers about your promotional offers.</p>"
+          }
+        },
+        "payment": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-lock",
+            "mobile_icon_width": 24,
+            "icon_width": 24,
+            "icon_background_type": "none",
+            "icon_background": "",
+            "icon_color": "",
+            "title": "Secure payment",
+            "content": "<p>Tel your customers about your payment methods.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "free-shipping",
+        "customer-support",
+        "discount",
+        "payment"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "title": "",
+        "heading_tag": "h6",
+        "text_alignment": "center",
+        "icon_spacing": "small",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "footerlogo": "shopify://shop_images/Logo_white.png",
+            "image_width_logo": 150,
+            "enablesvg": true,
+            "emailsvg": "<svg width=\"40\" height=\"40\" viewbox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"20\" cy=\"20\" r=\"20\" fill=\"#3D3D3D\"></circle>\n<path d=\"M26.9932 16.5315C26.9856 14.9372 26.0622 14.0166 24.4596 14.0045C23.4271 13.9985 22.3779 14 21.3621 14.0015C20.9072 14.003 20.4509 14.003 19.9945 14.003C19.5503 14.003 19.1045 14.003 18.6603 14.0015C18.2145 14.0015 17.7612 14 17.3063 14C16.7393 14 16.1692 14.0015 15.6052 14.0045C13.9844 14.0136 13.014 14.9734 13.008 16.5737C12.9973 18.9424 12.9973 21.2448 13.008 23.4177C13.0155 24.9908 13.9829 25.9733 15.5339 25.9853C18.3646 26.0049 21.2863 26.0049 24.4627 25.9853C26.041 25.9763 26.9856 25.0285 26.9932 23.4508C27.0023 21.1032 27.0023 18.7751 26.9932 16.5315ZM25.8803 23.7778C25.8651 24.4514 25.3906 24.8883 24.6704 24.8914C22.989 24.8989 21.4515 24.9019 20.0188 24.9019C18.3449 24.9019 16.8105 24.8974 15.3489 24.8868C14.5984 24.8823 14.1072 24.3564 14.0966 23.5488C14.0799 22.3599 14.0829 21.18 14.086 19.9309C14.0875 19.417 14.089 18.8942 14.089 18.3593V18.0745L14.7243 18.5039C14.982 18.6787 15.2125 18.8339 15.4399 18.9921C15.8553 19.2829 16.2708 19.5738 16.6847 19.8646C17.0531 20.1237 17.4231 20.3829 17.7915 20.6421C19.3168 21.7074 20.7298 21.7089 22.2384 20.6466C23.2679 19.9203 24.2989 19.1986 25.3314 18.4753C25.3784 18.4421 25.4239 18.4195 25.5013 18.3819C25.5437 18.3608 25.5998 18.3321 25.6726 18.2945L25.8939 18.1799V18.4286C25.8939 18.956 25.897 19.4743 25.8985 19.9881C25.9046 21.2946 25.9091 22.5271 25.8803 23.7778ZM25.4209 17.0724L25.1935 17.2337C23.9775 18.1001 22.7191 18.9951 21.4697 19.8585C20.9861 20.1931 20.507 20.3603 20.0263 20.3603C19.5412 20.3603 19.053 20.1885 18.5572 19.8465C17.5034 19.1217 16.4436 18.3713 15.4172 17.645L14.7864 17.1975C14.7349 17.1628 14.6818 17.1282 14.6272 17.0935C14.3301 16.9052 13.9222 16.6475 14.1405 16.0493C14.3756 15.4074 14.8198 15.0774 15.4642 15.0683C16.0706 15.0593 16.6877 15.0608 17.2866 15.0623C17.5368 15.0638 17.7885 15.0638 18.0402 15.0638H20.0081C20.4069 15.0623 20.792 15.0623 21.1832 15.0608C22.2384 15.0578 23.3301 15.0548 24.4035 15.0774C24.7826 15.0864 25.1889 15.213 25.4649 15.4089C25.7499 15.6123 25.9076 15.8971 25.9076 16.209C25.9076 16.5375 25.7302 16.8524 25.4209 17.0724Z\" fill=\"white\"></path>\n</svg>",
+            "emailurl": "info@gollers.in",
+            "phonesvg": "<svg width=\"40\" height=\"40\" viewbox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"20\" cy=\"20\" r=\"20\" fill=\"#3D3D3D\"></circle>\n<path d=\"M12 16.5876C12.0112 15.1411 12.7468 13.6518 14.0829 12.4501C14.7576 11.8436 15.8387 11.8507 16.5021 12.4673C17.1463 13.0657 17.7702 13.6884 18.3747 14.3274C19.0474 15.0385 19.0382 16.1376 18.39 16.868C18.3453 16.9188 18.2955 16.9655 18.2487 17.0133C17.3109 17.9793 17.25 18.5106 18.1542 19.5255C18.7334 20.1756 19.4314 20.7282 20.1173 21.2727C20.5582 21.6232 21.0784 21.5521 21.5214 21.1965C21.5875 21.1437 21.6515 21.0868 21.7054 21.0218C22.6757 19.8536 23.9854 19.752 25.1223 21.0452C25.4902 21.4637 25.9057 21.8416 26.2939 22.2419C27.2174 23.1947 27.2469 24.2431 26.3121 25.2C24.8653 26.6801 22.4389 27.504 20.0878 26.6628C18.96 26.2595 18.0679 25.5048 17.1778 24.753C15.672 23.4822 14.3369 22.0468 13.1695 20.459C12.4024 19.4178 12.0061 18.2546 12 16.5876ZM21.8273 26.0086C23.3138 26.0848 24.8582 25.4032 25.7604 24.3284C26.111 23.9109 26.116 23.4456 25.735 23.0505C25.1833 22.4785 24.6204 21.9158 24.0423 21.3703C23.6206 20.972 23.1715 20.9883 22.7295 21.3804C22.5649 21.5257 22.4176 21.6902 22.255 21.8386C21.493 22.5354 20.5308 22.6584 19.6356 22.125C18.5454 21.4749 17.6361 20.6165 16.9705 19.5305C16.2461 18.3481 16.3853 17.4491 17.3871 16.4921C17.4969 16.3875 17.6076 16.2798 17.698 16.1589C18.0018 15.7485 17.9978 15.3331 17.6422 14.9623C17.0803 14.3771 16.5062 13.8022 15.9128 13.2475C15.4973 12.8595 15.0786 12.8818 14.6417 13.2516C12.7864 14.8251 12.4034 17.7101 13.8157 19.6921C15.2402 21.6892 16.9573 23.405 18.9051 24.8973C19.8063 25.5891 20.795 26.0056 21.8273 26.0086Z\" fill=\"white\"></path>\n</svg>",
+            "phoneurl": "",
+            "title": "",
+            "content": "<p>1st Floor, 16-Gayatri Nagar Society, NR Gayatri Temple, Ved Road, Surat - 395004.</p>",
+            "enable_follow_on_shop": true
+          }
+        },
+        "links": {
+          "type": "links",
+          "settings": {
+            "menu": "footer",
+            "show_menu_title": true
+          }
+        },
+        "links_d6A8Q6": {
+          "type": "links",
+          "settings": {
+            "menu": "information",
+            "show_menu_title": true
+          }
+        },
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {
+            "image_width": 150,
+            "heading_size": "h6",
+            "title": "Join Our Newsletter",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "text",
+        "links",
+        "links_d6A8Q6",
+        "newsletter"
+      ],
+      "settings": {
+        "show_social_media": true,
+        "show_payment_icons": false,
+        "show_country_selector": false,
+        "show_country_flag": false,
+        "show_country_name": false,
+        "show_locale_selector": false
+      }
+    }
+  },
+  "order": [
+    "text-with-icons",
+    "footer"
+  ]
+}

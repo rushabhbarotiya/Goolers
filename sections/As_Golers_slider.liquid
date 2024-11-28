@@ -1,0 +1,290 @@
+<style>
+      .text1 {
+          color: #000;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          text-align: center;
+      }
+
+      .text2 {
+          color: #000;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 30px;
+          width: 655px;
+          margin: 0 auto;
+      }
+
+      .upbox p {
+          opacity: 0.55;
+          font-size: 18px;
+      }
+
+      .bt_text {
+          margin-top: 55px;
+      }
+
+      .bt_text p {
+          width: 350px;
+      }
+
+      .responsive {
+          position: relative;
+      }
+
+      .slider {
+          width: 100%;
+          padding: 100px 0;
+      }
+
+      .product_slide {
+          background-image: url("https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Vector_3.png?v=1731654443");
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 100%;
+          background-position: center;
+      }
+
+      .imagebox {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          width: 70%;
+          margin: 0 auto;
+      }
+
+      .upimg {
+          position: relative;
+          bottom: -50px;
+      }
+
+      .img-2 {
+          position: absolute;
+          top: 50px;
+          left: 20%;
+      }
+
+      .img-3 {
+          position: absolute;
+          top: 30%;
+          right: 10%;
+      }
+
+      .img-4 {
+          position: absolute;
+          top: 15%;
+          left: -10%;
+      }
+
+      .img-5 {
+          position: absolute;
+          bottom: 0%;
+          right: -5%;
+      }
+
+      .slick-dots li button:before {
+      font-size: 12.4px;
+      margin-top: 10px;
+  }
+
+
+
+      /*  css animation */
+      .up-down {
+          -webkit-animation: mover 1.2s infinite alternate;
+          animation: mover 1.2s infinite alternate;
+      }
+
+      .up-down-1 {
+          -webkit-animation: moversw 1.6s infinite alternate;
+          animation: moversw 1.6s infinite alternate;
+      }
+
+      @-webkit-keyframes mover {
+          0% {
+              transform: translateY(0);
+          }
+
+          100% {
+              transform: translateY(-10px);
+          }
+      }
+
+      @keyframes mover {
+          0% {
+              transform: translateY(0);
+          }
+
+          100% {
+              transform: translateY(-10px);
+          }
+      }
+
+      @-webkit-keyframes moversw {
+          0% {
+              transform: translateY(0);
+          }
+
+          100% {
+              transform: translateY(-12px);
+          }
+      }
+
+      @keyframes moversw {
+          0% {
+              transform: translateY(0);
+          }
+
+          100% {
+              transform: translateY(-12px);
+          }
+      }
+
+  /*  */
+  .animate-fadeIn {
+      animation: fadeIn 2s forwards;
+  }
+
+  .animate-slideIn {
+      animation: slideIn 1s forwards;
+  }
+  @keyframes fadeIn {
+      0% {
+          opacity: 0;
+          transform: translateY(50px);
+      }
+      100% {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  @keyframes slideIn {
+      0% {
+          opacity: 0;
+          transform: translateY(-50px);
+      }
+      100% {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  .imageanimated {
+      opacity: 0; /* Initially hidden */
+      transform: translateY(100px); /* Initial position for animation */
+      transition: all 0.8s ease-in-out;
+  }
+  /*  */
+</style>
+<section class="slider">
+  <div class="container">
+    <div class="row upbox" style="text-align: center;">
+      <h1 class="text1">{{ section.settings.Product_heading }}</h1>
+      <p class="text2">{{ section.settings.Product_subheading }}</p>
+    </div>
+  </div>
+  <div>
+    <div class="product_slide">
+      <div class="container">
+        <div class="responsive">
+          {% for product in section.settings.CollectionId.products %}
+            <div>
+              <div class="imagebox">
+                <div class="upimg imageanimated">
+                  <img class="img-1" src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.title }}">
+                </div>
+                <div class="img-2 up-down">
+                  <img src="{{ product.metafields.custom.image1 | img_url: 'master' }}" alt="Meta Image1">
+                </div>
+                <div class="img-3 up-down-1">
+                  <img src="{{ product.metafields.custom.image2 | img_url: 'master' }}" alt="Meta Image2">
+                </div>
+                <div class="img-4">
+                  <img src="{{ product.metafields.custom.image3 | img_url: 'master' }}" alt="Meta Image3">
+                </div>
+                <div class="img-5">
+                  <img src="{{ product.metafields.custom.image4 | img_url: 'master' }}" alt="Meta Image4">
+                </div>
+                <div class="main">
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Group_36.png?v=1731656428"
+                    alt="down"
+                  >
+                </div>
+              </div>
+              <div class="bt_text" style="text-align: center;">
+                <h1 class="text1">{{ product.title }}</h1>
+                <p class="text2">{{ product.description | strip_html | truncate: 100 }}</p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+"name": "Product slider",
+"settings": [
+{
+"type": "text",
+"id": "Product_heading",
+"label": "Heading Title"
+},
+{
+"type": "text",
+"id": "Product_subheading",
+"label": "Heading Sub Title"
+},
+{
+"type": "collection",
+"id": "CollectionId",
+"label": "Collection"
+}
+],
+"presets": [
+{
+"name": "As_slider"
+}
+]
+}
+{% endschema %}
+
+<script>
+  $(document).ready(function () {
+         // Initialize the Slick Slider
+         $('.responsive').slick({
+             slidesToShow: 1,
+             slidesToScroll: 1,
+             dots: true,
+             infinite: true,
+             autoplay: true,
+             autoplaySpeed: 6000,
+             arrows: false,
+         });
+
+       // Trigger animation on slide change
+       $('.responsive').on('afterChange', function (event, slick, currentSlide) {
+             // Remove animation classes from all images
+             $('.responsive .imageanimated').removeClass('animate-fadeIn animate-slideIn');
+
+             // Add animation class to the current slide's images
+             $('.slick-active .imageanimated').each(function (index) {
+                 let delay = index * 200; // Add a staggered delay for animations
+                 $(this).css('animation-delay', delay + 'ms');
+                 $(this).addClass('animate-fadeIn'); // Use your CSS animation class
+             });
+         });
+
+         // Trigger initial animation for the first slide
+         $('.responsive .slick-active .imageanimated').addClass('animate-fadeIn');
+     });
+</script>

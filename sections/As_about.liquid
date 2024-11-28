@@ -1,0 +1,108 @@
+<style>
+  .sincetext {
+      color: #000;
+      font-size: 33px;
+      font-style: normal;
+      font-weight: 300;
+      opacity: 0.55;
+      width: 430px;
+      max-width: 100%;
+      margin-bottom: 15px;
+  }
+
+  .text-p {
+      color: #000;
+      font-size: 16.465px;
+      font-style: normal;
+      font-weight: 400;
+  }
+
+  .divbox-about {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 68px;
+  }
+
+  .leftdiv {
+      width: 50%;
+  }
+
+  .rightdiv {
+      width: 50%;
+      text-align: center;
+  }
+
+  .rightdiv img {
+      margin: 0 auto;
+  }
+
+  @media screen and (max-width:998px) {
+      .sincetext {
+          font-size: 28px;
+      }
+  }
+
+  @media screen and (max-width:767px) {
+      .sincetext {
+          font-size: 28px;
+      }
+      .divbox-about {
+          display: unset;
+      }
+      .leftdiv,
+      .rightdiv {
+          width: 100%;
+          margin-bottom: 25px;
+      }
+      .sincetext {
+          width: 100%;
+      }
+  }
+</style>
+
+<div>
+  <div class="container">
+    <div class="divbox-about">
+      <div class="leftdiv">
+        <h1 class="sincetext">{{ section.settings.sincetxt }}</h1>
+        <p class="text-p">{{ section.settings.subtxt }}</p>
+      </div>
+      <div class="rightdiv">
+        {% if section.settings.imgabout %}
+          <img src="{{ section.settings.imgabout | image_url: 1000 }}" width="" height="">
+        {% else %}
+          <p>No image selected.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "Abous us",
+"settings": [
+{
+"type": "text",
+"label":"Enter heading",
+"id": "sincetxt"
+},
+{
+"type": "text",
+"label":"Enter subheading",
+"id": "subtxt"
+},
+{
+"type": "image_picker",
+"label":"upload image",
+"id": "imgabout"
+}
+],
+"presets": [
+{
+"name": "As_about_us "
+}
+]
+}
+{% endschema %}

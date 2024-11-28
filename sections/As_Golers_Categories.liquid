@@ -1,0 +1,147 @@
+<style>
+  .sec-cate{
+    margin-top:50px;
+  }
+  .box-categories {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 45px 0;
+  }
+
+  .sizebox {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .box-sub {
+      width: 265px;
+      max-width: 50%;
+      height: 92px;
+      border-radius: 14px;
+      background: #f2f2f2;
+      padding: 15px 28px;
+      text-decoration: none;
+  }
+
+  .textbl {
+      color: #000;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+  }
+
+  .textcl {
+      color: #000;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px;
+      opacity: 0.6;
+  }
+
+  .bxs {
+      width: 655px;
+      margin: 0 auto;
+  }
+
+  @media screen and (max-width:1200px) {
+      .box-sub {
+          margin-bottom: 15px;
+      }
+  }
+  @media screen and (max-width:767px) {
+      .bxs{
+          width: 100%;
+      }
+  }
+  @media screen and (max-width:580px) {
+      .box-sub {
+      width: 100%;
+      max-width: unset;
+  }
+</style>
+
+<section class="sec-cate">
+  <div class="container">
+    <div class="row">
+      <div style="text-align: center;">
+        <h1 class="textbl" style="font-size: 30px;">{{ section.settings.headingtext }}</h1>
+        <p class="textcl bxs">{{ section.settings.subtext }}</p>
+      </div>
+
+      <div class="box-categories">
+        {% for block in section.blocks %}
+          <a class="box-sub" href="{{ block.settings.urlcollcection }}">
+            <div>
+              <div class="sizebox">
+                <div>
+                  <img
+                    src="{{ block.settings.icon-categories | image_url: width: 1000 }}"
+                    alt="Category Icon"
+                  >
+                </div>
+                <div style="text-align: right">
+                  {% assign collection_handle = block.settings.urlcollcection | split: '/' | last %}
+                  {% assign linked_collection = collections[collection_handle] %}
+                  <h6 class="textbl">{{ block.settings.blocktext }}</h6>
+                  <p class="textcl">{{ linked_collection.products_count }}&nbsp;Verity</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+"name": "Our Categories",
+"settings": [
+{
+"type": "text",
+"id": "headingtext",
+"label": "Enter Heading"
+},
+{
+"type": "text",
+"id": "subtext",
+"label": "Enter Sub Heading"
+}
+],
+"blocks": [
+{
+"name": "Block",
+"type": "text",
+"limit": 4,
+"settings": [
+{
+"type": "image_picker",
+"id": "icon-categories",
+"label": "Upload Icon"
+},
+{
+"type": "text",
+"id": "blocktext",
+"label": "Enter Heading"
+},
+{
+"type": "url",
+"id": "urlcollcection",
+"label": "Add Collection Url"
+}
+]
+}
+],
+"presets": [
+{
+"name": "AS_categories"
+}
+]
+}
+{% endschema %}

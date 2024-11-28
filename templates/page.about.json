@@ -1,0 +1,208 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "content_width": "80ch"
+      }
+    },
+    "as_about_kxXFF8": {
+      "type": "As_about",
+      "settings": {
+        "sincetxt": "Since 1929, we have grown to become India's leading manufacturer of biscuits and confectionery.",
+        "subtxt": "As the makers of the world's largest selling biscuit, Parle-G, and a host of other verypopular brands, the Parle name symbolizes quality, nutrition and superior taste.",
+        "imgabout": "shopify://shop_images/about.png"
+      }
+    },
+    "as_about_kVRWtz": {
+      "type": "As_about",
+      "disabled": true,
+      "settings": {
+        "sincetxt": "Since 1929, we have grown to become India's leading manufacturer of biscuits and confectionery.",
+        "subtxt": "As the makers of the world's largest selling biscuit, Parle-G, and a host of other verypopular brands, the Parle name symbolizes quality, nutrition and superior taste.",
+        "imgabout": "shopify://shop_images/about.png"
+      }
+    },
+    "images_with_text_scrolling_3CVVzq": {
+      "type": "images-with-text-scrolling",
+      "blocks": {
+        "item_XHEMh9": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/about.png",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Since 1929, we have grown to become India's leading manufacturer of biscuits and confectionery.",
+            "content": "<p>As the makers of the world's largest selling biscuit, Parle-G, and a host of other verypopular brands, the Parle name symbolizes quality, nutrition and superior taste.</p>"
+          }
+        },
+        "item_xLagGz": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Heading 2",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_XHEMh9",
+        "item_xLagGz"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_background": true,
+        "head-scroll": "",
+        "sub-scroll": "",
+        "full_width": true,
+        "stack_on_mobile": false,
+        "show_counter": false,
+        "desktop_image_effect": "reveal",
+        "image_position": "end",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "images_with_text_scrolling_CVEaNF": {
+      "type": "images-with-text-scrolling",
+      "blocks": {
+        "item_KqXUyL": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Group_298.png",
+            "icon": "none",
+            "icon_width": 24,
+            "title": "Lorem Ipsum has been the industry's standarddummy text ever since the 1500s, when an unknownprinter took a galley of type and scrambled it tomake a type specimen book. It has survived notonly five centuries, but also the leap.{{ page.title }}{{ page.title }}",
+            "content": "<p>Lorem Ipsum has been the industry's standard dummytext ever since the 1500s, when an unknown printertook a galley of type and scrambled.</p>"
+          }
+        },
+        "item_Ujp8qG": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Heading 2",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_KqXUyL",
+        "item_Ujp8qG"
+      ],
+      "custom_css": [
+        ".prose .h1 {font-size: 18px; font-style: normal; font-weight: 300; line-height: 30px; opacity: 0.6;}",
+        ".images-scrolling-desktop__content-list {align-items: self-start;}"
+      ],
+      "settings": {
+        "show_background": true,
+        "backimageabt": "shopify://shop_images/Group_308_3.png",
+        "head-scroll": "Purpose Statement",
+        "sub-scroll": "Lorem Ipsum has been the industry's standard dummy text ever since",
+        "full_width": true,
+        "stack_on_mobile": false,
+        "show_counter": false,
+        "desktop_image_effect": "reveal",
+        "image_position": "start",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "As-About-golers-animated_UFgzFx": {
+      "type": "As-About-golers-animated",
+      "settings": {
+        "heading_txt": "Try our Golers Products!",
+        "heading_sub_txt": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "btn_txt": "Explore Journey!!",
+        "journeytxt-1": "Journey Startedin 1994.....",
+        "journeyhead-2": "Despite initial struggles and brand loyalty issues",
+        "journeytxt-2": "Hadvani persevered by personally interacting with the market,maintaining product quality, and avoiding price hikes.In 2008, faced with challenges from an out-of-city manufacturingplant, he made the tough decision to close it, rebranding thecompany to Gopal Snacks. The subsequent years saw remarkablegrowth, with revenue reaching ₹620.81 crore in FY17.",
+        "journeyhead-3": "Despite initial struggles and brand loyalty issues",
+        "journeytxt-3": "In response to market dynamics, Hadvani diversified Gopal Snacks into multiplecategories, including chips, wafers, corn snacks, pellets, spices, flour, and evenwashing bars. While chips now contribute seven percent to sales, 80 percent ofGopal's overall sales are still rooted in Gujarat.",
+        "journeyhead-4": "Traditional Cold Coco",
+        "journeytxt-4": "A cold cuppa cocoa is all what you need to endyour dinner on a sweet note. ",
+        "journeyhead-5": "Despite initial struggles and brandloyalty issues",
+        "journeytxt-5": "Gopal Snacks capitalized on changing consumer preferences, with a shift towardsbranded products and the decline of smaller, unbranded traditional snack shops.Hadvani's understanding of regional tastes further contributed to the brand's success.",
+        "journeyhead-6": "Golers Locho Chutney",
+        "journeytxt-6": "Its vibrant chutney creates aculinary experience",
+        "img_one": "shopify://shop_images/Group_44.png",
+        "img_two": "shopify://shop_images/Group_16.png",
+        "img_three": "shopify://shop_images/Group_46.png",
+        "img_four": "shopify://shop_images/Group_14.png",
+        "img_five": "shopify://shop_images/Group_60.png",
+        "img_six": "shopify://shop_images/Group_311.png",
+        "img_seven": "shopify://shop_images/Group_47.png",
+        "img_Eight": "shopify://shop_images/image-removebg-preview_1.png",
+        "img_logo": "shopify://shop_images/Group_59.png"
+      }
+    },
+    "image_with_text_overlay_LKDkcm": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_phefME": {
+          "type": "subheading",
+          "settings": {
+            "text": "Subheading"
+          }
+        },
+        "heading_x3cQee": {
+          "type": "heading",
+          "settings": {
+            "text": "Image with text overlay",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_GzpnG4": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_phefME",
+        "heading_x3cQee",
+        "richtext_GzpnG4"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    }
+  },
+  "order": [
+    "main",
+    "as_about_kxXFF8",
+    "as_about_kVRWtz",
+    "images_with_text_scrolling_3CVVzq",
+    "images_with_text_scrolling_CVEaNF",
+    "As-About-golers-animated_UFgzFx",
+    "image_with_text_overlay_LKDkcm"
+  ]
+}

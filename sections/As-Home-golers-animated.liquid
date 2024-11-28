@@ -1,0 +1,584 @@
+<style>
+    .headx {
+        text-align: center;
+        padding-top: 85px;
+        z-index:5;
+        position:relative;
+    }
+
+    .ptext {
+        margin: 15px 0;
+    }
+
+    .animatedclass {
+        background-image: url(https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Original_62001354-White-Pine_1_1.png?v=1732172849);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .mainbx {
+        width: 100%;
+        height: 2230px;
+        position: relative;
+    }
+
+    .squiggle {
+        position: absolute;
+        top: -160px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        /* padding-left: 125px; */
+        z-index: 0;
+    }
+
+    .squiggle_home {
+        position: absolute;
+        top: 48%;
+        left: 0;
+        width: 50%;
+    }
+
+    .squiggle-right {
+        position: absolute;
+        top: 52%;
+        right: 0;
+        width: 50%;
+    }
+</style>
+<style>
+    .since-box {
+        position: absolute;
+        right: 12%;
+        width: 135px;
+        top: 10%;
+    }
+
+    .bicycle-box {
+        position: absolute;
+        right: 25%;
+        top: 3.7%;
+    }
+
+    .bicycle-box {
+        opacity: 0;
+        transform: translateX(100%);
+        transition: transform 1s ease-out, opacity 1s ease-out;
+    }
+
+    .bicycle-box.animate {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Example layout styling */
+    .bicycle-box img {
+        max-width: 100%;
+        display: block;
+    }
+
+    .Gopal-locho-home {
+        position: absolute;
+        left: 15%;
+        top: 6.4%;
+    }
+    .Gopal-locho-home img {
+        position: relative;   
+    }
+    .gopal-name {
+    position: absolute;
+    left: 33%;
+    top: 5.5%;
+}
+.gopal-name {
+    display: inline-block; 
+    opacity: 0; 
+    animation: hideShow 4s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes hideShow {
+    0%, 100% {
+        opacity: 0; 
+    }
+    50% {
+        opacity: 1; 
+    }
+}
+
+    .brand-box {
+        position: absolute;
+        top: 17%;
+        left: 12%;
+        width: 500px;
+    }
+
+    .brand-box h6,
+    .brand_loyalty-box h6,
+    .barnd-traditional-box h6,
+    .brand-loyalty-box h6,
+    .barnd-locho-box h6 {
+        color: #000;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .brand-box p,
+    .brand_loyalty-box p,
+    .barnd-traditional-box p,
+    .brand-loyalty-box p,
+    .barnd-locho-box p,
+    .since-box p {
+        opacity: 0.6;
+    }
+
+    .brand-man {
+        position: absolute;
+        right: 35%;
+        top: 19%;
+    }
+
+    .brand-man {
+        display: inline-block;
+        animation: wave 5s ease-in-out infinite;
+    }
+
+    @keyframes wave {
+        0% {
+            transform: translateX(0);
+        }
+
+        50% {
+            transform: translateX(20px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .brand_loyalty-box {
+        position: absolute;
+        top: 35%;
+        right: 10%;
+        width: 590px;
+        text-align: right;
+    }
+
+    .iconitem-box {
+        position: absolute;
+        top: 40.5%;
+        right: 10%;
+    }
+
+    .truck-box {
+        position: absolute;
+        top: 46.2%;
+        left: 0%;
+        opacity: 0;
+        /* Initially hidden */
+        transform: translateX(-100px);
+        /* Start slightly to the left */
+        transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+        /* Smooth transitions */
+    }
+
+    .truck-box.animate {
+        opacity: 1;
+        /* Fully visible */
+        transform: translateX(100px);
+        /* Move to the original position */
+    }
+
+    .cold-coco-box {
+        position: absolute;
+        top: 61.5%;
+        left: 10%;
+        width: 15%;
+    }
+
+    .cold-coco-box img {
+        opacity: 0;
+        transform: scale(0.8);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .cold-coco-box img.show {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .barnd-traditional-box {
+        position: absolute;
+        top: 64%;
+        left: 28%;
+        width: 300px;
+    }
+
+    .brand-loyalty-box {
+        position: absolute;
+        top: 75%;
+        left: 6%;
+        width: 600px;
+    }
+
+    .chutney-box {
+        position: absolute;
+        top: 64%;
+        right: 15%;
+    }
+
+    .chutney-box img {
+        opacity: 0;
+        transform: scale(0.6);
+        transition: opacity 1.2s ease, transform 1.2s ease;
+    }
+
+    .chutney-box img.show {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .barnd-locho-box {
+        position: absolute;
+        top: 75%;
+        right: 10%;
+        text-align: right;
+        width: 250px;
+    }
+
+    .Gopal-logo-box {
+        position: absolute;
+        top: 88%;
+        left: 49%;
+    }
+
+    .Gopal-logo-box img {
+        opacity: 0;
+        transform: scale(0.6);
+        transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+
+    .Gopal-logo-box img.show {
+        opacity: 1;
+        transform: scale(1);
+    }
+</style>
+sty
+
+<section class="animatedclass">
+    <div class="container">
+        <div class="headx">
+            <p class="h1">Try our Golers Products!</p>
+            <p class="ptext">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            <a class="button button--xl button--outline" href="#">Explore Journey!!</a>
+        </div>
+
+        <div class="mainbx">
+            {% comment %} <svg width="1321" height="1345" viewBox="0 0 1321 1345" fill="none"
+                preserveAspectRatio="xMidYMax meet" class="squiggle">
+                <path id="svgPath"
+                    d="M1356.71 1H1254.53C1213.74 1 1180.52 27.7314 1180.52 60.5535V370.503C1180.52 403.325 1147.3 430.056 1106.51 430.056H75.0089C34.2199 430.056 1 456.788 1 489.61V753.202C1 786.024 34.2199 812.755 75.0089 812.755H797.437C838.226 812.755 871.446 786.024 871.446 753.202V607.702C871.446 574.88 904.666 548.148 945.455 548.148H1119.96C1160.75 548.148 1193.97 574.88 1193.97 607.702V1284.45C1193.97 1317.27 1227.19 1344 1267.98 1344H1416"
+                    stroke="#60241A" stroke-width="2" stroke-miterlimit="10" />
+            </svg> {% endcomment %}
+            <svg width="1440" height="2436" viewBox="0 0 1440 2436" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="squiggle">
+                <path id="svgPath_home"
+                    d="M1478.7 70H1345.74C1320.89 70 1300.74 90.1472 1300.74 115V453.35C1300.74 478.203 1280.59 498.35 1255.74 498.35H167C142.147 498.35 122 518.497 122 543.35V842.04C122 866.893 142.147 887.04 167 887.04H950.13C974.983 887.04 995.13 866.893 995.13 842.04V665.96C995.13 641.107 1015.28 620.96 1040.13 620.96H1267.87C1292.72 620.96 1312.87 641.107 1312.87 665.96V1505.06C1312.87 1529.91 1292.72 1550.06 1267.87 1550.06H1043.26C1018.41 1550.06 998.26 1570.21 998.26 1595.06V1735.78C998.26 1760.63 1018.41 1780.78 1043.26 1780.78H1321.09C1345.94 1780.78 1366.09 1800.93 1366.09 1825.78V2003.43C1366.09 2028.28 1345.94 2048.43 1321.09 2048.43H999.43C974.577 2048.43 954.43 2068.58 954.43 2093.43V2302"
+                    stroke="url(#paint0_linear_406_14)" stroke-width="2" stroke-miterlimit="10" />
+                <defs>
+                    <linearGradient id="paint0_linear_406_14" x1="800.35" y1="70" x2="800.35" y2="2302"
+                        gradientUnits="userSpaceOnUse">
+                        <stop offset="0.811749" stop-color="#60241A" />
+                        <stop offset="0.989937" stop-color="white" />
+                    </linearGradient>
+                </defs>
+            </svg>
+
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="857" height="1018" viewBox="0 0 857 1018" fill="none"
+                class="squiggle_home ">
+                <path
+                    d="M-5 1H539.174C565.775 1 587.365 25.3709 587.365 55.3994V171.161C587.365 201.19 565.775 225.561 539.174 225.561H159.043C132.441 225.561 110.851 249.931 110.851 279.96V484.284C110.851 514.312 132.441 538.683 159.043 538.683H807.695C834.296 538.683 855.886 563.054 855.886 593.083V1017.5"
+                    stroke="url(#paint0_linear_1_2165)" stroke-width="2" stroke-miterlimit="10" />
+                <defs>
+                    <linearGradient id="paint0_linear_1_2165" x1="425.443" y1="1" x2="425.443" y2="1017.5"
+                        gradientUnits="userSpaceOnUse">
+                        <stop offset="0.648244" stop-color="#60241A" />
+                        <stop offset="1" stop-color="white" />
+                    </linearGradient>
+                </defs>
+            </svg>
+            {% comment %} <svg xmlns="http://www.w3.org/2000/svg" width="489" height="706" viewBox="0 0 489 706"
+                fill="none" class="squiggle-right">
+                <path
+                    d="M369 491.768C337.704 491.768 368.885 491.768 368.885 491.768H49.459C22.8576 491.768 1.26807 516.139 1.26807 546.167V705.884M604 1H80.9999C60.0131 1 42.9999 18.0132 42.9999 39V186C42.9999 206.987 60.0131 224 80.9999 224H323.5M184 224H369.026C390.012 224 407 240.96 407 261.946V454.017C407 475.004 389.987 492 369 492H291"
+                    stroke="url(#paint0_linear_89_229)" stroke-width="2" stroke-miterlimit="10" />
+                <defs>
+                    <linearGradient id="paint0_linear_89_229" x1="302.634" y1="1" x2="302.634" y2="705.884"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#60241A" />
+                        <stop offset="1" stop-color="white" />
+                    </linearGradient>
+                </defs>
+            </svg> {% endcomment %}
+            <div>
+                <div class="since-box">
+                    <p>Journey Started
+                        in 1994.....</p>
+                </div>
+                <div class="bicycle-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Group_44.png?v=1732249159" width="" height=""
+                        alt="bicycle">
+                </div>
+                <div>
+                    <div class="Gopal-locho-home">
+                        <img src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Group_16.png?v=1732614697" width="" height=""
+                            alt="Gopal House">
+                    </div>
+                    <div class="gopal-name">
+                        <img src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Group_46.png?v=1732614697" width="" height=""
+                        alt="Gopal House">
+                    </div>
+                </div>
+               
+            </div>
+            <div>
+                <div class="brand-box">
+                    <h6>Despite initial struggles and brand loyalty issues</h6>
+                    <p>Hadvani persevered by personally interacting with the market,
+                        maintaining product quality, and avoiding price hikes.
+                        In 2008, faced with challenges from an out-of-city manufacturing
+                        plant, he made the tough decision to close it, rebranding the
+                        company to Gopal Snacks. The subsequent years saw remarkable
+                        growth, with revenue reaching ₹620.81 crore in FY17.</p>
+                </div>
+                <div class="brand-man">
+                    {% comment %} <video autoplay muted loop playsinline width="640" height="360">
+                        <source
+                            src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Animation_-_1732531864733.gif?v=1732534973"
+                            type="video/mp4">
+                    </video> {% endcomment %}
+                    {% comment %} <img
+                        src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Animation_-_1732531864733.gif?v=1732534973"
+                        alt="" srcset=""> {% endcomment %}
+                    <img src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Group_14.png?v=1732249159" width="" height=""
+                        alt="Man's">
+                </div>
+            </div>
+            <div class="">
+                <div class="truck-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Group_60.png?v=1732183444" width="" height=""
+                        alt="Truck">
+                </div>
+                <div class="brand_loyalty-box">
+                    <h6>Despite initial struggles and brand loyalty issues</h6>
+                    <p>In response to market dynamics, Hadvani diversified Gopal Snacks into multiple
+                        categories, including chips, wafers, corn snacks, pellets, spices, flour, and even
+                        washing bars. While chips now contribute seven percent to sales, 80 percent of
+                        Gopal's overall sales are still rooted in Gujarat.</p>
+                </div>
+                <div class="iconitem-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Group_311.png?v=1732249160" width="" height=""
+                        alt="icon-brand">
+                </div>
+            </div>
+
+            <div>
+                <div class="cold-coco-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Group_47.png?v=1732249160" width="" height=""
+                        alt="Cold coco">
+                </div>
+                <div class="barnd-traditional-box">
+                    <h6>Traditional Cold Coco</h6>
+                    <p>A cold cuppa cocoa is all what you need to end
+                        your dinner on a sweet note.</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="brand-loyalty-box">
+                    <h6>Despite initial struggles and brand
+                        loyalty issues</h6>
+                    <p>Gopal Snacks capitalized on changing consumer preferences, with a shift towards
+                        branded products and the decline of smaller, unbranded traditional snack shops.
+                        Hadvani's understanding of regional tastes further contributed to the brand's success.</p>
+                </div>
+                <div class="chutney-box">
+                    <img src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/image-removebg-preview_1.png?v=1732249160" width="" height=""
+                        alt="Chutney">
+                </div>
+                <div class="barnd-locho-box">
+                    <h6>Golers Locho Chutney</h6>
+                    <p>Its vibrant chutney creates a
+                        culinary experience</p>
+                </div>
+            </div>
+            <div class="Gopal-logo-box">
+                <img src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Group_59.png?v=1732249159" width="" height=""
+                    alt="Gopal-logo">
+            </div>
+        </div>
+    </div>
+
+
+
+</section>
+
+
+<script>
+   document.addEventListener("DOMContentLoaded", () => {
+        const svg = document.getElementById("svgPath_home");
+        const length = svg.getTotalLength();
+
+        // Initial setup of stroke-dasharray and stroke-dashoffset
+        svg.style.strokeDasharray = length;
+        svg.style.strokeDashoffset = length;
+
+        // Add smooth transition
+        svg.style.transition = "stroke-dashoffset 0.5s ease-out";
+
+        window.addEventListener("scroll", () => {
+            const scrollPosition = document.body.scrollTop + document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+            // Calculate scroll percentage
+            const scrollPercent = scrollPosition / scrollHeight;
+
+            // Adjust animation around center point
+            const centerPoint = 0.5; // 40% of scroll height
+            const offsetRange = 0.2; // 25% range for smooth animation
+            let adjustedScroll = 0;
+
+            if (scrollPercent >= centerPoint - offsetRange && scrollPercent <= centerPoint + offsetRange) {
+                adjustedScroll =
+                    (scrollPercent - (centerPoint - offsetRange)) / (2 * offsetRange);
+            } else if (scrollPercent > centerPoint + offsetRange) {
+                adjustedScroll = 1;
+            }
+
+            // Update stroke-dashoffset for animation
+            const draw = length * adjustedScroll;
+            svg.style.strokeDashoffset = length - draw;
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const svgElement = document.querySelector(".squiggle_home path");
+        const length = svgElement.getTotalLength();
+
+        // Initial setup of stroke-dasharray and stroke-dashoffset
+        svgElement.style.strokeDasharray = length;
+        svgElement.style.strokeDashoffset = length;
+
+        // Add smooth transition
+        svgElement.style.transition = "stroke-dashoffset 0.5s ease-out";
+
+        window.addEventListener("scroll", () => {
+            const scrollPosition = document.body.scrollTop + document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+            // Calculate scroll percentage
+            const scrollPercent = scrollPosition / scrollHeight;
+
+            // Adjust animation around center point
+            const centerPoint = 0.5; // 40% of scroll height
+            const offsetRange = 0.2; // 25% range for smooth animation
+            let adjustedScroll = 0;
+
+            if (scrollPercent >= centerPoint - offsetRange && scrollPercent <= centerPoint + offsetRange) {
+                adjustedScroll =
+                    (scrollPercent - (centerPoint - offsetRange)) / (2 * offsetRange);
+            } else if (scrollPercent > centerPoint + offsetRange) {
+                adjustedScroll = 1;
+            }
+
+            // Update stroke-dashoffset for animation
+            const draw = length * adjustedScroll;
+            svgElement.style.strokeDashoffset = length - draw;
+        });
+    });
+</script>
+
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const truckBox = document.querySelector(".truck-box");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    truckBox.classList.add("animate"); // Trigger animation
+                }
+            });
+        }, {
+            root: null, // Use the viewport as the root
+            threshold: 0.5 // Element is visible when 50% of it is in the viewport
+        });
+
+        observer.observe(truckBox);
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+        const bicycleBox = document.querySelector(".bicycle-box");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    bicycleBox.classList.add("animate"); // Trigger the animation
+                }
+            });
+        }, {
+            root: null, // Use the viewport as the root
+            threshold: 0.5 // Element is visible when 50% of it is in the viewport
+        });
+
+        observer.observe(bicycleBox);
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const images = document.querySelectorAll(".cold-coco-box img, .chutney-box img, .Gopal-logo-box img");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add("show");
+                    }, index * 500); // Stagger animations by 500ms
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.5
+        });
+
+        images.forEach((img) => observer.observe(img));
+    });
+</script>
+
+{% schema %}
+{
+"name": "Explore Journey",
+"settings": [
+{
+"type": "text",
+"id": "headingtext",
+"label": "Enter Heading"
+}
+],
+"presets": [
+{
+"name": "AS_Journey_home"
+}
+]
+}
+{% endschema %}

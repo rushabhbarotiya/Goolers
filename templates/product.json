@@ -1,0 +1,457 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {}
+        },
+        "breadcrumbs_pYxUCa": {
+          "type": "breadcrumbs",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h2"
+          }
+        },
+        "separator_aVgNVV": {
+          "type": "separator",
+          "settings": {}
+        },
+        "badges": {
+          "type": "badges",
+          "disabled": true,
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "rating": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {
+            "show_empty": false
+          }
+        },
+        "payment_terms": {
+          "type": "payment_terms",
+          "disabled": true,
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "disabled": true,
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "collapse_content": false
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "stack_blocks": true,
+            "selector_mode": "block",
+            "color_mode": "color",
+            "size_chart_page": ""
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient": true,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "line_item_property_mGWX6b": {
+          "type": "line_item_property",
+          "disabled": true,
+          "settings": {
+            "label": "Your label",
+            "type": "text",
+            "required": false,
+            "allow_long_text": false
+          }
+        },
+        "offer_gwELw4": {
+          "type": "offer",
+          "disabled": true,
+          "settings": {
+            "text_alignment": "start",
+            "icon_position": "aligned",
+            "icon": "picto-coupon",
+            "icon_width": 24,
+            "title": "Shipping",
+            "content": "<p>Short content about your shipping rates or discounts.</p>",
+            "background": "#eaf2ed",
+            "text_color": "#00a341"
+          }
+        },
+        "text_hc8NQ6": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p><strong>Why shop from Golers?</strong></p>"
+          }
+        },
+        "liquid_hjkdeg": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<style>\n.benefitheading{\n font-size: 20px;\nfont-weight: 600;  \n}\n</style>\n<p class=\"benefitheading\">Why shop from Golers?</p>"
+          }
+        },
+        "benefit_kWTgCr": {
+          "type": "benefit",
+          "settings": {
+            "benefitimg": "shopify://shop_images/delivery.png",
+            "benefittitle": "Superfast Delivery",
+            "benefitdesc": "Get your order delivered to your doorstep at the earliest from\ndark stores near you."
+          }
+        },
+        "benefit_U33EYH": {
+          "type": "benefit",
+          "settings": {
+            "benefitimg": "shopify://shop_images/price.png",
+            "benefittitle": "Best Prices & Offers",
+            "benefitdesc": "Best price destination with offers directly from the manufacturers."
+          }
+        },
+        "benefit_tqDUTG": {
+          "type": "benefit",
+          "settings": {
+            "benefitimg": "shopify://shop_images/wide.png",
+            "benefittitle": "Wide Assortment",
+            "benefitdesc": "Choose from 5000+ products across food, personal care,\nhousehold & other categories"
+          }
+        },
+        "judge_me_reviews_review_widget_mNXWwG": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "vendor",
+        "breadcrumbs_pYxUCa",
+        "title",
+        "separator_aVgNVV",
+        "badges",
+        "price",
+        "rating",
+        "payment_terms",
+        "separator",
+        "description",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "line_item_property_mGWX6b",
+        "offer_gwELw4",
+        "text_hc8NQ6",
+        "liquid_hjkdeg",
+        "benefit_kWTgCr",
+        "benefit_U33EYH",
+        "benefit_tqDUTG",
+        "judge_me_reviews_review_widget_mNXWwG"
+      ],
+      "custom_css": [
+        ".shopify-payment-button__button {height: auto;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "show_fixed_add_to_cart": true,
+        "desktop_media_width": 55,
+        "desktop_media_layout": "carousel_thumbnails_left",
+        "mobile_media_size": "expanded",
+        "mobile_carousel_control": "floating_dots",
+        "enable_video_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "input_background": "rgba(0,0,0,0)",
+        "input_text_color": ""
+      }
+    },
+    "image_with_text_overlay_Yj3ing": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_gbhLey": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "Subheading"
+          }
+        },
+        "heading_6HbV6W": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "text": "Image with text overlay",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_V3drrw": {
+          "type": "richtext",
+          "disabled": true,
+          "settings": {
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_gbhLey",
+        "heading_6HbV6W",
+        "richtext_V3drrw"
+      ],
+      "settings": {
+        "full_width": false,
+        "allow_transparent_header": false,
+        "enable_parallax": false,
+        "image_size": "auto",
+        "image": "{{ product.metafields.custom.produt_banner_desktop.value }}",
+        "mobile_image": "{{ product.metafields.custom.produt_banner_mobile.value }}",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "recommendations_count": 6,
+        "products": [],
+        "full_width": true,
+        "stack_products": true,
+        "show_progress_bar": false,
+        "products_per_row_mobile": "1",
+        "products_per_row_desktop": 3,
+        "subheading": "",
+        "title": "You may also like",
+        "content": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
+    "images_with_text_scrolling_mGkRNU": {
+      "type": "images-with-text-scrolling",
+      "blocks": {
+        "item_MgGNtr": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/imgone_1.jpg",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Heading 1",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_MgGNtr"
+      ],
+      "custom_css": [],
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": true,
+        "show_counter": false,
+        "desktop_image_effect": "reveal",
+        "image_position": "start",
+        "background": "#fff8f2",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "images_with_text_scrolling_X3LtRi": {
+      "type": "images-with-text-scrolling",
+      "blocks": {
+        "item_HKpDjQ": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/imgone_1.jpg",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Heading 1",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_HKpDjQ"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": true,
+        "show_counter": false,
+        "desktop_image_effect": "reveal",
+        "image_position": "start",
+        "background": "#fff8f2",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "images_with_text_scrolling_rD8dj7": {
+      "type": "images-with-text-scrolling",
+      "blocks": {
+        "item_4pX9xn": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/imgtwo_1.jpg",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "Heading 1",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_4pX9xn"
+      ],
+      "custom_css": [],
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": true,
+        "show_counter": false,
+        "desktop_image_effect": "reveal",
+        "image_position": "end",
+        "background": "#fff8f2",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "rich_text_pRDFYq": {
+      "type": "rich-text",
+      "blocks": {
+        "subheading_pGh3mM": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "text": "Subheading"
+          }
+        },
+        "heading_qiTDky": {
+          "type": "heading",
+          "settings": {
+            "text": "ABOUT US",
+            "heading_tag": "h1",
+            "text_color": "",
+            "gradient": ""
+          }
+        },
+        "richtext_FpzUrW": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Entrepreneurship was thrust on the Virani brothers at a young age, when drought forced their father to sellancestral agricultural land and give his sons a mere Rs. 20,000, with the advice to go forth and start abusiness. The road ahead saw Bhikhubhai, Chandubhai and Kanubhai fail at their first venture of fertilizers and thentake up working at a boarding mess in Rajkot.</p>"
+          }
+        },
+        "button_bt6FnL": {
+          "type": "button",
+          "settings": {
+            "style": "outline",
+            "size": "xl",
+            "text": "Read more",
+            "url": "",
+            "background": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "subheading_pGh3mM",
+        "heading_qiTDky",
+        "richtext_FpzUrW",
+        "button_bt6FnL"
+      ],
+      "custom_css": [
+        ".section-blends {background-image: url(\"https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Layer-1_2_1.png?v=1731662275\"); background-position: center; background-size: contain; background-repeat: no-repeat;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "asbgimg": "shopify://shop_images/Layer-1_2_1.png",
+        "content_width": "small",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "1732106571aaeebb02": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_MDeRqB": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_MDeRqB"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "enable_review_integration": true,
+        "review_header_gradient": "linear-gradient(135deg, rgba(255, 194, 102, 1), rgba(255, 163, 26, 1) 100%)",
+        "review_header_text_color": "#000000",
+        "review_button_background": "#000000",
+        "review_button_text_color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_Yj3ing",
+    "related-products",
+    "images_with_text_scrolling_mGkRNU",
+    "images_with_text_scrolling_X3LtRi",
+    "images_with_text_scrolling_rD8dj7",
+    "rich_text_pRDFYq",
+    "1732106571aaeebb02"
+  ]
+}

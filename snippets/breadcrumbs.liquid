@@ -1,0 +1,51 @@
+<nav class="breadcrumb">
+  <a href="{{ routes.root_url }}" class="breadcrumb-link">Home</a>
+
+  {% if collection %}
+    <!-- If the product is being viewed through a collection -->
+    <span class="breadcrumb-arrow">→</span>
+    <a href="{{ collection.url }}" class="breadcrumb-link">{{ collection.title }}</a>
+  {% endif %}
+
+  {% for crumb in breadcrumbs %}
+    <span class="breadcrumb-arrow">→</span>
+    <a href="{{ crumb.url }}" class="breadcrumb-link">{{ crumb.title }}</a>
+  {% endfor %}
+
+  {% if product %}
+    <!-- If the page is a product, add the product title -->
+    <span class="breadcrumb-arrow">→</span>
+    <span class="breadcrumb-current">{{ product.title }}</span>
+  {% else %}
+    <!-- If the page is not a product, add the current page title -->
+    <span class="breadcrumb-arrow">→</span>
+    <span class="breadcrumb-current">{{ page_title }}</span>
+  {% endif %}
+</nav>
+
+<style>
+  .breadcrumb {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .breadcrumb-link {
+    color: #0073e6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .breadcrumb-link:hover {
+    color: #005bb5;
+  }
+  .breadcrumb-arrow {
+    color: #333;
+  }
+  .breadcrumb-current {
+    font-weight: bold;
+    color: #333;
+  }
+</style>
