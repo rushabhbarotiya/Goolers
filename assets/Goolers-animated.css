@@ -20,6 +20,7 @@
   width: 100%;
   height: 2230px;
   position: relative;
+  overflow: hidden;
 }
 
 .squiggle {
@@ -271,31 +272,342 @@
   transform: scale(1);
 }
 /* =========================================================================================================== */
+@media screen and (max-width: 1441px) {
+  .squiggle {
+    top: -150px;
+  }
+}
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1366px) and (min-width: 1281px) {
+  .mainbx {
+    height: 1900px;
+  }
   .squiggle {
     top: -115px;
   }
-
-  img {
-    width: 100%;
+  .headx img {
+    width: 85%;
   }
-
   .bicycle-box {
-    position: absolute;
     right: calc(50% - 330px);
     top: 4%;
   }
   .Gopal-locho-home {
-    position: absolute;
     left: calc(50% - 480px);
     top: 6.7%;
-}
-.squiggle-left {
-    position: absolute;
+  }
+  .squiggle-left {
     top: 45%;
     left: 0;
     width: 50%;
+  }
+  .truck-box {
+    top: 44.7%;
+  }
+  .cold-coco-box {
+    top: 59.5%;
+  }
+  .barnd-traditional-box {
+    top: 62%;
+  }
+  .brand_loyalty-box {
+    right: 14%;
+  }
+  .iconitem-box {
+    right: calc(50% - 445px);
+  }
+  .brand-loyalty-box {
+    left: 0%;
+    top: 70%;
+  }
+  .chutney-box {
+    top: 64%;
+  }
+  .barnd-locho-box {
+    top: 75%;
+  }
+  .Gopal-logo-box {
+    top: 83%;
+  }
+  .brand-man {
+    top: 18%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .headx img {
+    width: 70%;
+  }
+  .iconitem-box {
+    right: calc(90% - 540px);
+  }
+  .squiggle {
+    position: unset;
+  }
+  .chutney-box {
+    top: 55%;
+    right: 10%;
+  }
+  .barnd-locho-box {
+    top: 64%;
+    right: 5%;
+  }
+  .cold-coco-box {
+    top: 64.5%;
+    left: 10%;
+    width: 22%;
+  }
+  .barnd-traditional-box {
+    top: 65%;
+    left: 28%;
+    width: 260px;
+  }
+  .brand-loyalty-box {
+    top: 75%;
+    left: 6%;
+    width: 360px;
+  }
+  .Gopal-logo-box {
+    top: 85%;
+    left: 40%;
+  }
+  .bicycle-box {
+    right: calc(60% - 365px);
+    top: 6.7%;
+  }
+  .Gopal-locho-home {
+    left: calc(50% - 360px);
+    top: 8.6%;
+  }
+  .truck-box {
+    top: 54.2%;
+  }
+  .brand-man {
+    right: calc(32% - 220px);
+  }
+}
+@media screen and (max-width:1025px) and (min-width:999px) {
+    .bicycle-box {
+        right: calc(60% - 365px);
+        top: 3.9%;
+    }   
+    .Gopal-locho-home {
+        left: calc(50% - 360px);
+        top: 6.6%;
+    }
+    .truck-box {
+        top: 52.2%;
+        left: -5%;
+    }
+    .cold-coco-box {
+        top: 64.5%;
+        left: 10%;
+        width: 15%;
+    }
+    .brand-loyalty-box {
+        top: 74%;
+    }
+    .since-box {
+        position: absolute;
+        right: 9%;
+        width: 135px;
+        top: 8%;
+    }
+
+
+}
+@media screen and (max-width: 998px) {
+  .headx {
+    padding-top: 50px;
+  }
+  .animatedclass {
+    display: block;
+    background-image: url(https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Group_340.png?v=1732871704);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .squiggle,
+  .squiggle-left {
+    display: none;
+  }
+  .mainbx img{
+    width: 70%;
+  }
+  .bicycle-box {
+    right: calc(50% - 30px);
+    top: 5%;
+}
+.since-box {
+    top: 5%;
+    right: 25%;
+    width: 115px;
+}
+  .Gopal-locho-home {
+    left: calc(88% - 200px);
+    top: 13.6%;
+}
+.gopal-name {
+    right: 0%;
+    top: 12.5%;
+    left: unset;
+}
+  /* .brand-box h6, .brand_loyalty-box h6, .barnd-traditional-box h6, .brand-loyalty-box h6, .barnd-locho-box h6 {
+        font-size: 18px;
+    }
+    .mainbx p{
+        font-size: 14px;
+    } */
+    .brand-box {
+        top: 20%;
+        left: 15%;
+        width: 80%;
+        text-align: right;
+    }
+    .brand-man {
+        right: calc(85% - 220px);
+        top: 30%;
+    }
+    .iconitem-box {
+        right: calc(0% + 140px);
+        top: 27.5%;
+    }
+  .brand_loyalty-box {
+    top: 40%;
+    right: 10%;
+    width: 80%;
+    text-align: left;
+}
+.barnd-traditional-box {
+    top: 58%;
+    left: 7%;
+    width: 50%;
+}
+  .barnd-locho-box {
+    top: 70%;
+    right: 5%;
+    text-align: left;
+  }
+  .brand-loyalty-box {
+    top: 82%;
+    left: 5%;
+    width: 70%;
+  }
+  .truck-box {
+    top: 52%;
+}
+.barnd-locho-box {
+    top: 70%;
+    right: unset;
+    left: 5%;
+}
+.cold-coco-box {
+    top: 53.5%;
+    left: unset;
+    right: 0%;
+    width: 40%;
+}
+.chutney-box {
+    top: 71%;
+    right: 10%;
+}
+.Gopal-logo-box {
+    top: 90%;
+    left: unset;
+    right: 0%;
 }
 
 }
+
+
+@media screen and (max-width: 778px) {
+  /* .animatedclass {
+    display: block;
+    background-image: url(https://cdn.shopify.com/s/files/1/0914/1809/9993/files/26.png?v=1732858587);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  } */
+
+  .brand-box {
+    top: 20%;
+    left: 0%;
+    width: 100%;
+    text-align: right;
+}
+.iconitem-box {
+    right: calc(0% + 45px);
+    top: 28.5%;
+}
+.brand-man {
+    right: calc(100% - 220px);
+    top: 30%;
+}
+.truck-box.animate {
+    opacity: 1;
+    transform: translate(30px);
+}
+.cold-coco-box {
+    top: 54.5%;
+    left: unset;
+    right: -10%;
+    width: 40%;
+}
+.barnd-traditional-box {
+    top: 64%;
+    left: 7%;
+    width: 80%;
+}
+.barnd-locho-box {
+    top: 68%;
+    right: unset;
+    left: 5%;
+}
+.brand-loyalty-box {
+    top: 80%;
+    left: 5%;
+    width: 90%;
+}
+.Gopal-logo-box {
+    top: 91%;
+    left: unset;
+    right: -10%;
+}
+.Gopal-locho-home {
+    left: unset;
+    top: 13%;
+    right: -25px;
+}
+
+}
+
+
+@media screen and (max-width: 480px) {
+    .mainbx img {
+        width: 55%;
+    }
+    .Gopal-locho-home {
+        left: unset;
+        top: 12%;
+        right: -130px;
+    }
+    .gopal-name {
+        right: -15%;
+        top: 11.5%;
+        left: unset;
+    }
+    .cold-coco-box {
+        top: 56.5%;
+        left: unset;
+        right: -10%;
+        width: 52%;
+    }
+    .chutney-box {
+        top: 72%;
+        right: 0%;
+    }
+    .barnd-traditional-box {
+        top: 64%;
+        left: 5%;
+    }
+
+  }
+  

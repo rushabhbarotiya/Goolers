@@ -1,5 +1,6 @@
 {{ 'Goolers-animated.css' | asset_url | stylesheet_tag }}
 <section class="animatedclass">
+    
     <div class="container">
         <div class="headx">
             <p class="h1">{{section.settings.heading_txt}}</p>
@@ -61,15 +62,7 @@
                     <h6>{{section.settings.journeyhead-2}}</h6>
                     <p>{{section.settings.journeytxt-2}}</p>
                 </div>
-                <div class="brand-man">
-                    {% comment %} <video autoplay muted loop playsinline width="640" height="360">
-                        <source
-                            src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Animation_-_1732531864733.gif?v=1732534973"
-                            type="video/mp4">
-                    </video> {% endcomment %}
-                    {% comment %} <img
-                        src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Animation_-_1732531864733.gif?v=1732534973"
-                        alt="" srcset=""> {% endcomment %}
+                <div class="brand-man">                 
                     <img src="{{ section.settings.img_four | img_url: 'master'}}" width="" height="">
                 </div>
             </div>
