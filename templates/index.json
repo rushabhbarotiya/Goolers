@@ -297,6 +297,25 @@
         "heading_gradient": ""
       }
     },
+    "as_home_golers_animated_hALk8r": {
+      "type": "As-Home-golers-animated",
+      "settings": {
+        "heading_txt": "",
+        "heading_sub_txt": "",
+        "btn_txt": "",
+        "journeytxt-1": "",
+        "journeyhead-2": "",
+        "journeytxt-2": "",
+        "journeyhead-3": "",
+        "journeytxt-3": "",
+        "journeyhead-4": "",
+        "journeytxt-4": "",
+        "journeyhead-5": "",
+        "journeytxt-5": "",
+        "journeyhead-6": "",
+        "journeytxt-6": ""
+      }
+    },
     "image-with-text-overlay": {
       "type": "image-with-text-overlay",
       "blocks": {
@@ -328,6 +347,7 @@
         "1664424230c4756b0e-1",
         "1664424230c4756b0e-2"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "allow_transparent_header": false,
@@ -1263,6 +1283,7 @@
     "featured_collection_DyYd6K",
     "slideshow_nRhVTx",
     "collection_list_htP6Np",
+    "as_home_golers_animated_hALk8r",
     "image-with-text-overlay",
     "scrolling_text_HQWnYG",
     "as_golers_slider_MtXcnK",

@@ -69,7 +69,80 @@
             svgElement.style.strokeDashoffset = length - draw;
         });
     });
+// ===================================================================
 
+   document.addEventListener("DOMContentLoaded", () => {
+        const svg = document.getElementById("svgPath_home");
+        const length = svg.getTotalLength();
+
+        // Initial setup of stroke-dasharray and stroke-dashoffset
+        svg.style.strokeDasharray = length;
+        svg.style.strokeDashoffset = length;
+
+        // Add smooth transition
+        svg.style.transition = "stroke-dashoffset 0.5s ease-out";
+
+        window.addEventListener("scroll", () => {
+            const scrollPosition = document.body.scrollTop + document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+            // Calculate scroll percentage
+            const scrollPercent = scrollPosition / scrollHeight;
+
+            // Adjust animation around center point
+            const centerPoint = 0.5; // 40% of scroll height
+            const offsetRange = 0.2; // 25% range for smooth animation
+            let adjustedScroll = 0;
+
+            if (scrollPercent >= centerPoint - offsetRange && scrollPercent <= centerPoint + offsetRange) {
+                adjustedScroll =
+                    (scrollPercent - (centerPoint - offsetRange)) / (2 * offsetRange);
+            } else if (scrollPercent > centerPoint + offsetRange) {
+                adjustedScroll = 1;
+            }
+
+            // Update stroke-dashoffset for animation
+            const draw = length * adjustedScroll;
+            svg.style.strokeDashoffset = length - draw;
+        });
+    });
+
+// ===================================================================
+    document.addEventListener("DOMContentLoaded", () => {
+        const svgElement = document.querySelector(".squiggle_home path");
+        const length = svgElement.getTotalLength();
+
+        // Initial setup of stroke-dasharray and stroke-dashoffset
+        svgElement.style.strokeDasharray = length;
+        svgElement.style.strokeDashoffset = length;
+
+        // Add smooth transition
+        svgElement.style.transition = "stroke-dashoffset 0.5s ease-out";
+
+        window.addEventListener("scroll", () => {
+            const scrollPosition = document.body.scrollTop + document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+            // Calculate scroll percentage
+            const scrollPercent = scrollPosition / scrollHeight;
+
+            // Adjust animation around center point
+            const centerPoint = 0.5; // 40% of scroll height
+            const offsetRange = 0.2; // 25% range for smooth animation
+            let adjustedScroll = 0;
+
+            if (scrollPercent >= centerPoint - offsetRange && scrollPercent <= centerPoint + offsetRange) {
+                adjustedScroll =
+                    (scrollPercent - (centerPoint - offsetRange)) / (2 * offsetRange);
+            } else if (scrollPercent > centerPoint + offsetRange) {
+                adjustedScroll = 1;
+            }
+
+            // Update stroke-dashoffset for animation
+            const draw = length * adjustedScroll;
+            svgElement.style.strokeDashoffset = length - draw;
+        });
+    });
 // ====================================================================
     document.addEventListener("DOMContentLoaded", () => {
         const truckBox = document.querySelector(".truck-box");

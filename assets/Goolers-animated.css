@@ -23,7 +23,7 @@
   overflow: hidden;
 }
 
-.squiggle {
+.squiggle,.svgPath_home {
   position: absolute;
   top: -160px;
   left: 0;
@@ -33,7 +33,7 @@
   z-index: 0;
 }
 
-.squiggle-left {
+.squiggle-left,.squiggle_home {
   position: absolute;
   top: 48%;
   left: 0;
@@ -273,7 +273,7 @@
 }
 /* =========================================================================================================== */
 @media screen and (max-width: 1441px) {
-  .squiggle {
+  .squiggle,.svgPath_home {
     top: -150px;
   }
 }
@@ -282,7 +282,7 @@
   .mainbx {
     height: 1900px;
   }
-  .squiggle {
+  .squiggle,.svgPath_home {
     top: -115px;
   }
   .headx img {
@@ -296,7 +296,7 @@
     left: calc(50% - 480px);
     top: 6.7%;
   }
-  .squiggle-left {
+  .squiggle-left,.squiggle_home {
     top: 45%;
     left: 0;
     width: 50%;
@@ -341,7 +341,7 @@
   .iconitem-box {
     right: calc(90% - 540px);
   }
-  .squiggle {
+  .squiggle,.svgPath_home {
     position: unset;
   }
   .chutney-box {
@@ -427,7 +427,7 @@
     background-repeat: no-repeat;
   }
   .squiggle,
-  .squiggle-left {
+  .squiggle-left,.svgPath_home,.squiggle_home {
     display: none;
   }
   .mainbx img{
@@ -608,6 +608,9 @@
         top: 64%;
         left: 5%;
     }
-
+    .iconitem-box {
+        right: calc(0% + 45px);
+        top: 30.5%;
+    }
   }
   

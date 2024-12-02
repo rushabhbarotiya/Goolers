@@ -1,280 +1,11 @@
-<style>
-    .headx {
-        text-align: center;
-        padding-top: 85px;
-        z-index:5;
-        position:relative;
-    }
-
-    .ptext {
-        margin: 15px 0;
-    }
-
-    .animatedclass {
-        background-image: url(https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Original_62001354-White-Pine_1_1.png?v=1732172849);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    .mainbx {
-        width: 100%;
-        height: 2230px;
-        position: relative;
-    }
-
-    .squiggle {
-        position: absolute;
-        top: -160px;
-        left: 0;
-        width: 100%;
-        height: auto;
-        /* padding-left: 125px; */
-        z-index: 0;
-    }
-
-    .squiggle_home {
-        position: absolute;
-        top: 48%;
-        left: 0;
-        width: 50%;
-    }
-
-    .squiggle-right {
-        position: absolute;
-        top: 52%;
-        right: 0;
-        width: 50%;
-    }
-</style>
-<style>
-    .since-box {
-        position: absolute;
-        right: 12%;
-        width: 135px;
-        top: 10%;
-    }
-
-    .bicycle-box {
-        position: absolute;
-        right: 25%;
-        top: 3.7%;
-    }
-
-    .bicycle-box {
-        opacity: 0;
-        transform: translateX(100%);
-        transition: transform 1s ease-out, opacity 1s ease-out;
-    }
-
-    .bicycle-box.animate {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    /* Example layout styling */
-    .bicycle-box img {
-        max-width: 100%;
-        display: block;
-    }
-
-    .Gopal-locho-home {
-        position: absolute;
-        left: 15%;
-        top: 6.4%;
-    }
-    .Gopal-locho-home img {
-        position: relative;   
-    }
-    .gopal-name {
-    position: absolute;
-    left: 33%;
-    top: 5.5%;
-}
-.gopal-name {
-    display: inline-block; 
-    opacity: 0; 
-    animation: hideShow 4s ease-in-out infinite;
-    animation-delay: 0.5s;
-}
-
-@keyframes hideShow {
-    0%, 100% {
-        opacity: 0; 
-    }
-    50% {
-        opacity: 1; 
-    }
-}
-
-    .brand-box {
-        position: absolute;
-        top: 17%;
-        left: 12%;
-        width: 500px;
-    }
-
-    .brand-box h6,
-    .brand_loyalty-box h6,
-    .barnd-traditional-box h6,
-    .brand-loyalty-box h6,
-    .barnd-locho-box h6 {
-        color: #000;
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-    }
-
-    .brand-box p,
-    .brand_loyalty-box p,
-    .barnd-traditional-box p,
-    .brand-loyalty-box p,
-    .barnd-locho-box p,
-    .since-box p {
-        opacity: 0.6;
-    }
-
-    .brand-man {
-        position: absolute;
-        right: 35%;
-        top: 19%;
-    }
-
-    .brand-man {
-        display: inline-block;
-        animation: wave 5s ease-in-out infinite;
-    }
-
-    @keyframes wave {
-        0% {
-            transform: translateX(0);
-        }
-
-        50% {
-            transform: translateX(20px);
-        }
-
-        100% {
-            transform: translateX(0);
-        }
-    }
-
-    .brand_loyalty-box {
-        position: absolute;
-        top: 35%;
-        right: 10%;
-        width: 590px;
-        text-align: right;
-    }
-
-    .iconitem-box {
-        position: absolute;
-        top: 40.5%;
-        right: 10%;
-    }
-
-    .truck-box {
-        position: absolute;
-        top: 46.2%;
-        left: 0%;
-        opacity: 0;
-        /* Initially hidden */
-        transform: translateX(-100px);
-        /* Start slightly to the left */
-        transition: opacity 2s ease-in-out, transform 2s ease-in-out;
-        /* Smooth transitions */
-    }
-
-    .truck-box.animate {
-        opacity: 1;
-        /* Fully visible */
-        transform: translateX(100px);
-        /* Move to the original position */
-    }
-
-    .cold-coco-box {
-        position: absolute;
-        top: 61.5%;
-        left: 10%;
-        width: 15%;
-    }
-
-    .cold-coco-box img {
-        opacity: 0;
-        transform: scale(0.8);
-        transition: opacity 1s ease, transform 1s ease;
-    }
-
-    .cold-coco-box img.show {
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    .barnd-traditional-box {
-        position: absolute;
-        top: 64%;
-        left: 28%;
-        width: 300px;
-    }
-
-    .brand-loyalty-box {
-        position: absolute;
-        top: 75%;
-        left: 6%;
-        width: 600px;
-    }
-
-    .chutney-box {
-        position: absolute;
-        top: 64%;
-        right: 15%;
-    }
-
-    .chutney-box img {
-        opacity: 0;
-        transform: scale(0.6);
-        transition: opacity 1.2s ease, transform 1.2s ease;
-    }
-
-    .chutney-box img.show {
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    .barnd-locho-box {
-        position: absolute;
-        top: 75%;
-        right: 10%;
-        text-align: right;
-        width: 250px;
-    }
-
-    .Gopal-logo-box {
-        position: absolute;
-        top: 88%;
-        left: 49%;
-    }
-
-    .Gopal-logo-box img {
-        opacity: 0;
-        transform: scale(0.6);
-        transition: opacity 1.5s ease, transform 1.5s ease;
-    }
-
-    .Gopal-logo-box img.show {
-        opacity: 1;
-        transform: scale(1);
-    }
-</style>
-sty
+{{ 'Goolers-animated.css' | asset_url | stylesheet_tag }}
 
 <section class="animatedclass">
     <div class="container">
         <div class="headx">
-            <p class="h1">Try our Golers Products!</p>
-            <p class="ptext">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-            <a class="button button--xl button--outline" href="#">Explore Journey!!</a>
+            <p class="h1">{{section.settings.heading_txt}}</p>
+            <p class="ptext">{{section.settings.heading_sub_txt}}</p>
+            <a class="button button--xl button--outline" href="#">{{section.settings.btn_txt}}</a>
         </div>
 
         <div class="mainbx">
@@ -300,7 +31,7 @@ sty
 
 
             <svg xmlns="http://www.w3.org/2000/svg" width="857" height="1018" viewBox="0 0 857 1018" fill="none"
-                class="squiggle_home ">
+                class="squiggle_home">
                 <path
                     d="M-5 1H539.174C565.775 1 587.365 25.3709 587.365 55.3994V171.161C587.365 201.19 565.775 225.561 539.174 225.561H159.043C132.441 225.561 110.851 249.931 110.851 279.96V484.284C110.851 514.312 132.441 538.683 159.043 538.683H807.695C834.296 538.683 855.886 563.054 855.886 593.083V1017.5"
                     stroke="url(#paint0_linear_1_2165)" stroke-width="2" stroke-miterlimit="10" />
@@ -327,110 +58,219 @@ sty
             </svg> {% endcomment %}
             <div>
                 <div class="since-box">
-                    <p>Journey Started
-                        in 1994.....</p>
+                    <p>{{section.settings.journeytxt-1}}</p>
                 </div>
                 <div class="bicycle-box">
-                    <img src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Group_44.png?v=1732249159" width="" height=""
-                        alt="bicycle">
+
+                    <img src="{{ section.settings.img_one | img_url: 'master'}}" width="" height="">
+
                 </div>
                 <div>
                     <div class="Gopal-locho-home">
-                        <img src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Group_16.png?v=1732614697" width="" height=""
-                            alt="Gopal House">
+                        <img src="{{ section.settings.img_two | img_url: 'master'}}" width="" height="">
                     </div>
                     <div class="gopal-name">
-                        <img src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Group_46.png?v=1732614697" width="" height=""
-                        alt="Gopal House">
+                        <img src="{{ section.settings.img_three | img_url: 'master'}}" width="" height="">
                     </div>
                 </div>
-               
+
             </div>
             <div>
                 <div class="brand-box">
-                    <h6>Despite initial struggles and brand loyalty issues</h6>
-                    <p>Hadvani persevered by personally interacting with the market,
-                        maintaining product quality, and avoiding price hikes.
-                        In 2008, faced with challenges from an out-of-city manufacturing
-                        plant, he made the tough decision to close it, rebranding the
-                        company to Gopal Snacks. The subsequent years saw remarkable
-                        growth, with revenue reaching ₹620.81 crore in FY17.</p>
+                    <h6>{{section.settings.journeyhead-2}}</h6>
+                    <p>{{section.settings.journeytxt-2}}</p>
                 </div>
-                <div class="brand-man">
-                    {% comment %} <video autoplay muted loop playsinline width="640" height="360">
-                        <source
-                            src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Animation_-_1732531864733.gif?v=1732534973"
-                            type="video/mp4">
-                    </video> {% endcomment %}
-                    {% comment %} <img
-                        src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Animation_-_1732531864733.gif?v=1732534973"
-                        alt="" srcset=""> {% endcomment %}
-                    <img src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Group_14.png?v=1732249159" width="" height=""
-                        alt="Man's">
+                <div class="brand-man">                 
+                    <img src="{{ section.settings.img_four | img_url: 'master'}}" width="" height="">
                 </div>
             </div>
             <div class="">
                 <div class="truck-box">
-                    <img src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Group_60.png?v=1732183444" width="" height=""
-                        alt="Truck">
+                    <img src="{{ section.settings.img_five | img_url: 'master'}}" width="" height="">
                 </div>
                 <div class="brand_loyalty-box">
-                    <h6>Despite initial struggles and brand loyalty issues</h6>
-                    <p>In response to market dynamics, Hadvani diversified Gopal Snacks into multiple
-                        categories, including chips, wafers, corn snacks, pellets, spices, flour, and even
-                        washing bars. While chips now contribute seven percent to sales, 80 percent of
-                        Gopal's overall sales are still rooted in Gujarat.</p>
+                    <h6>{{section.settings.journeyhead-3}}</h6>
+                    <p>{{section.settings.journeytxt-3}}</p>
                 </div>
                 <div class="iconitem-box">
-                    <img src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Group_311.png?v=1732249160" width="" height=""
-                        alt="icon-brand">
+                    <img src="{{ section.settings.img_six | img_url: 'master'}}" width="" height="">
                 </div>
             </div>
 
             <div>
                 <div class="cold-coco-box">
-                    <img src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Group_47.png?v=1732249160" width="" height=""
-                        alt="Cold coco">
+                    <img src="{{ section.settings.img_seven | img_url: 'master'}}" width="" height="">
                 </div>
                 <div class="barnd-traditional-box">
-                    <h6>Traditional Cold Coco</h6>
-                    <p>A cold cuppa cocoa is all what you need to end
-                        your dinner on a sweet note.</p>
+                    <h6>{{section.settings.journeyhead-4}}</h6>
+                    <p>{{section.settings.journeytxt-4}}</p>
                 </div>
             </div>
 
             <div>
                 <div class="brand-loyalty-box">
-                    <h6>Despite initial struggles and brand
-                        loyalty issues</h6>
-                    <p>Gopal Snacks capitalized on changing consumer preferences, with a shift towards
-                        branded products and the decline of smaller, unbranded traditional snack shops.
-                        Hadvani's understanding of regional tastes further contributed to the brand's success.</p>
+                    <h6>{{section.settings.journeyhead-5}}</h6>
+                    <p>{{section.settings.journeytxt-5}}</p>
                 </div>
                 <div class="chutney-box">
-                    <img src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/image-removebg-preview_1.png?v=1732249160" width="" height=""
-                        alt="Chutney">
+                    <img src="{{ section.settings.img_Eight | img_url: 'master'}}" width="" height="">
                 </div>
                 <div class="barnd-locho-box">
-                    <h6>Golers Locho Chutney</h6>
-                    <p>Its vibrant chutney creates a
-                        culinary experience</p>
+                    <h6>{{section.settings.journeyhead-6}}</h6>
+                    <p>{{section.settings.journeytxt-6}}</p>
                 </div>
             </div>
             <div class="Gopal-logo-box">
-                <img src="https://cdn.shopify.com/s/files/1/0914/1809/9993/files/Group_59.png?v=1732249159" width="" height=""
-                    alt="Gopal-logo">
+                <img src="{{ section.settings.img_logo | img_url: 'master'}}" width="" height="">
             </div>
         </div>
     </div>
-
-
-
 </section>
 
 
+
+
+
+
+
+{% schema %}
+{
+"name": "Explore Journey",
+"settings": [
+{
+"type": "text",
+"id": "heading_txt",
+"label": "Enter Heading"
+},
+{
+"type": "text",
+"id": "heading_sub_txt",
+"label": "Enter SubHeading"
+},
+{
+"type": "text",
+"id": "btn_txt",
+"label": "Enter Button Name"
+},
+{
+"type": "header",
+"content": "journey text"
+},
+{
+"type": "text",
+"id": "journeytxt-1",
+"label": "Enter pargraph one"
+},
+{
+"type": "text",
+"id": "journeyhead-2",
+"label": "Enter heading Two"
+},
+{
+"type": "text",
+"id": "journeytxt-2",
+"label": "Enter pargraph Two"
+},
+{
+"type": "text",
+"id": "journeyhead-3",
+"label": "Enter heading Three"
+},
+{
+"type": "text",
+"id": "journeytxt-3",
+"label": "Enter pargraph Three"
+},
+{
+"type": "text",
+"id": "journeyhead-4",
+"label": "Enter heading Four"
+},
+{
+"type": "text",
+"id": "journeytxt-4",
+"label": "Enter pargraph Four"
+},
+{
+"type": "text",
+"id": "journeyhead-5",
+"label": "Enter heading Five"
+},
+{
+"type": "text",
+"id": "journeytxt-5",
+"label": "Enter pargraph Five"
+},
+{
+"type": "text",
+"id": "journeyhead-6",
+"label": "Enter heading Six"
+},
+{
+"type": "text",
+"id": "journeytxt-6",
+"label": "Enter pargraph Six"
+},
+{
+"type": "header",
+"content": "journey images"
+},
+{
+"type":"image_picker",
+"id": "img_one",
+"label": "upload image first(bicycle)"
+},
+{
+"type":"image_picker",
+"id": "img_two",
+"label": "upload image Two(Gopal Home)"
+},
+{
+"type":"image_picker",
+"id": "img_three",
+"label": "upload image three(Gopal name)"
+},
+{
+"type":"image_picker",
+"id": "img_four",
+"label": "upload image four(person-meet)"
+},
+{
+"type":"image_picker",
+"id": "img_five",
+"label": "upload image five(Truck)"
+},
+{
+"type":"image_picker",
+"id": "img_six",
+"label": "upload image six(icon)"
+},
+{
+"type":"image_picker",
+"id": "img_seven",
+"label": "upload image seven(cocoa)"
+},
+{
+"type":"image_picker",
+"id": "img_Eight",
+"label": "upload image Eight(Chutney)"
+},
+{
+"type":"image_picker",
+"id": "img_logo",
+"label": "upload Logo(logo-goolers)"
+}
+],
+"presets": [
+{
+"name": "AS_Journey_home"
+}
+]
+}
+{% endschema %}
+
 <script>
-   document.addEventListener("DOMContentLoaded", () => {
+       document.addEventListener("DOMContentLoaded", () => {
         const svg = document.getElementById("svgPath_home");
         const length = svg.getTotalLength();
 
@@ -465,9 +305,8 @@ sty
             svg.style.strokeDashoffset = length - draw;
         });
     });
-</script>
 
-<script>
+// ===================================================================
     document.addEventListener("DOMContentLoaded", () => {
         const svgElement = document.querySelector(".squiggle_home path");
         const length = svgElement.getTotalLength();
@@ -503,13 +342,7 @@ sty
             svgElement.style.strokeDashoffset = length - draw;
         });
     });
-</script>
-
-
-
-
-
-<script>
+// ====================================================================
     document.addEventListener("DOMContentLoaded", () => {
         const truckBox = document.querySelector(".truck-box");
 
@@ -542,8 +375,9 @@ sty
 
         observer.observe(bicycleBox);
     });
-</script>
-<script>
+
+
+// ====================================================================
     document.addEventListener("DOMContentLoaded", () => {
         const images = document.querySelectorAll(".cold-coco-box img, .chutney-box img, .Gopal-logo-box img");
 
@@ -563,22 +397,5 @@ sty
 
         images.forEach((img) => observer.observe(img));
     });
-</script>
 
-{% schema %}
-{
-"name": "Explore Journey",
-"settings": [
-{
-"type": "text",
-"id": "headingtext",
-"label": "Enter Heading"
-}
-],
-"presets": [
-{
-"name": "AS_Journey_home"
-}
-]
-}
-{% endschema %}
+</script>
